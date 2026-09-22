@@ -12,7 +12,7 @@ optdepends=('gum: menu fallback outside Omarchy'
 makedepends=('python-build' 'python-installer' 'python-wheel' 'python-setuptools')
 checkdepends=('python-pytest')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
-sha256sums=('SKIP')
+sha256sums=('55f9c6ca3016845f5e613c91bab79916df7f1c5457444583b9f70b6e1d65fbe2')
 
 build() {
   cd "$pkgname-$pkgver"
