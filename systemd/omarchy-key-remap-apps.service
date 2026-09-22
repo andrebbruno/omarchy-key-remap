@@ -1,0 +1,19 @@
+[Unit]
+Description=Per-app key remaps for Omarchy (follows the focused window)
+Documentation=https://github.com/andrebbruno/omarchy-key-remap
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/omarchy-key-remap watch
+Restart=on-failure
+RestartSec=2
+# Nothing here writes: it reads the focus from Hyprland and talks to keyd's socket.
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+PrivateTmp=true
+
+[Install]
+WantedBy=graphical-session.target

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omarchy-key-remap"
+version = "0.1.0"
+description = "Keyboard Manager for Omarchy: remap keys and shortcuts system-wide or inside one app, on top of keyd."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "Andre Bruno" }]
+keywords = ["omarchy", "powertoys", "keyboard", "keyd", "remap", "hyprland", "wayland"]
+classifiers = [
+  "Environment :: X11 Applications",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Topic :: Desktop Environment",
+]
+dependencies = []
+
+[project.scripts]
+omarchy-key-remap = "okeyremap.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/andrebbruno/omarchy-key-remap"
+
+[tool.setuptools.packages.find]
+include = ["okeyremap*"]
